@@ -1,4 +1,5 @@
 #ifndef SMSG_H
+#define SMSG_H
 #include <Arduino.h>
 #include <src/kernel.h>
 
