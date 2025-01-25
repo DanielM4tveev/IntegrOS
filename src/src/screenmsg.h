@@ -49,6 +49,7 @@ void screenmessage () {
         _DEV_NL_SERIAL_(bootlog[i]);
         delay(_SYS_SLEEP_TICK_);  // Задержка между строками, параметр указан в kernel.h
     }
+    _DEV_WARNING_DEVBUILD_
     _DEV_NL_SERIAL_("");
 }
 

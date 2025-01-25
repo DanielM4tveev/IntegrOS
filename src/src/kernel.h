@@ -10,6 +10,7 @@
 #define _SYS_SLEEP_TICK_ 500
 #define _PIN_MODE_ pinMode
 #define _USER_INPUT_SERIAL_ _DEV_SERIAL_("#!/ ")
+#define _DEV_WARNING_DEVBUILD_ _DEV_SERIAL_("USING A DEVBUILD IntegrOS\nOnly for a Test\nYouAreTheBest:)\n");
 
 // System parameters
 #define _SYS_CLK_FREQ_          16000000UL      // System clock frequency (16 MHz for AVR)
