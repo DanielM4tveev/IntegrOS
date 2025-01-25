@@ -57,7 +57,8 @@ Command commands[] = {
   {"whoami", whoami},
   {"uname", uname},
   {"help", help},
-  {"kill 0xff", panic}
+  {"kill 0xff", panic},
+  {"reboot", reboot}
 };
 
 const int numCommands = sizeof(commands) / sizeof(commands[0]);
@@ -75,13 +76,13 @@ void executeCommand(const String& command) {
 
 void setup() {
   // Инициализация серийного порта
-  Serial.begin(SerialPort);
-  pinMode(DefaultLed, OUTPUT);
+  Serial.begin(_DEV_SERIAL_BAUD_);
+  pinMode(_HW_LED_DEFAULT_, OUTPUT);
   
   // Вывод логов с задержками
   for (int i = 0; i < numLines; i++) {
     Serial.println(bootlog[i]);
-    delay(dlclock);  // Задержка между строками, параметр указан в kernel.h
+    delay(_SYS_SLEEP_TICK_);  // Задержка между строками, параметр указан в kernel.h
   }
   Serial.println("");
   Serial.print("#!/ ");
