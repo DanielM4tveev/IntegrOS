@@ -2,10 +2,14 @@
 #define kernel_h
  
 // Kernel Params
-#define _DEV_SERIAL_ Serial
+#define _DEV_SERIAL_ Serial.print
+#define _DEV_NL_SERIAL_ Serial.println
 #define _DEV_SERIAL_BAUD_ 115200
+#define _DEV_SERIAL_INIT_ Serial.begin
 #define _HW_LED_DEFAULT_ 13
 #define _SYS_SLEEP_TICK_ 500
+#define _PIN_MODE_ pinMode
+#define _USER_INPUT_SERIAL_ _DEV_SERIAL_("#!/ ")
 
 // System parameters
 #define _SYS_CLK_FREQ_          16000000UL      // System clock frequency (16 MHz for AVR)

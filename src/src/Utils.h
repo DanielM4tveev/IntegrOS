@@ -10,11 +10,11 @@ void whoami() {
 
     const int numLines = sizeof(whoLines) / sizeof(whoLines[0]);
 
-    Serial.println("");
+    _DEV_NL_SERIAL_("");
     for (int i = 0; i < numLines; i++) {
-        Serial.println(whoLines[i]); // Вывод каждой строки через серийный порт
+        _DEV_NL_SERIAL_(whoLines[i]); // Вывод каждой строки через серийный порт
     }
-    Serial.print("#!/ ");
+    _USER_INPUT_SERIAL_;
 }
 
 void uname() {
@@ -28,11 +28,11 @@ void uname() {
     
     const int numLines = sizeof(infoLines) / sizeof(infoLines[0]);
 
-    Serial.println("");
+    _DEV_NL_SERIAL_("");
     for (int i = 0; i < numLines; i++) {
-        Serial.println(infoLines[i]); // Вывод каждой строки через серийный порт
+        _DEV_NL_SERIAL_(infoLines[i]); // Вывод каждой строки через серийный порт
     }
-    Serial.print("#!/ ");  
+    _USER_INPUT_SERIAL_;  
 }
 
 
@@ -47,11 +47,11 @@ void help() {
 
     const int numLines = sizeof(helpLines) / sizeof(helpLines[0]);
 
-    Serial.println("");
+    _DEV_NL_SERIAL_("");
     for (int i = 0; i < numLines; i++) {
-        Serial.println(helpLines[i]); // Вывод каждой строки через серийный порт
+        _DEV_NL_SERIAL_(helpLines[i]); // Вывод каждой строки через серийный порт
     }
-    Serial.print("#!/ ");
+    _USER_INPUT_SERIAL_;
 }
  
 #endif
